@@ -1,0 +1,3 @@
+How many lines does the queue and value channel print?
+
+queue prints 3 lines, value prints 1.
