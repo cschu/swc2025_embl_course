@@ -1,0 +1,8 @@
+What input file would it run and why?
+
+ref1_1.fq.gz, as this is the default input
+
+How would you get it to process all .fq.gz files in the data/yeast/reads directory as well as changing the sleep input to 1 second?
+
+nextflow run wc-params.nf --input 'data/yeast/reads/*.fq.gz' --sleep 1
+
