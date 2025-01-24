@@ -28,7 +28,7 @@ input_ch = Channel.fromPath(params.input)
 process count_lines {
 
     input:
-    path read
+    path(reads)
 
     output:
     stdout
@@ -36,10 +36,10 @@ process count_lines {
     script:
     """
     # Print file name
-    printf '${read}\\t'
+    echo ${reads}
 
     # Unzip file and count number of lines
-    gunzip -c ${read} | wc -l
+    gunzip -c ${reads} | wc -l
     """
 }
 
